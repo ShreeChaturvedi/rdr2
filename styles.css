@@ -56,6 +56,7 @@ video {
   top: 0;
   left: 0;
   z-index: -1;
+  filter: brightness(0.6) blur(1px);
 }
 
 .clickable,
@@ -888,7 +889,16 @@ input:valid ~ .underline::before {
 
 .footer > .contacts {
   float: right;
-  margin: 20px 20px 20px 0;
+  margin: 20px 40px 20px 0;
+}
+
+.footer > .contacts > a > span {
+  transition: all 0.15s;
+}
+
+.footer > .contacts > a > span:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 7px #fff14f);
 }
 
 #wikipedia {
@@ -902,10 +912,15 @@ input:valid ~ .underline::before {
   font-size: 48px;
 }
 
-#marvel {
+#rockstar {
   display: inline-block;
   height: 60px;
   margin: 20px 8px 8px 10px;
+  transition: all 0.3s;
+}
+
+#rockstar:hover {
+  filter: invert() drop-shadow(0 0 7px #fff14f);
 }
 
 .animate {
